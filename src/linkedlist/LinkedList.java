@@ -112,6 +112,14 @@ public class LinkedList {
         return array;
     }
 
+    public static boolean search(Node head, int key) {
+        if (head == null)
+            return false;
+        if (head.value == key)
+            return true;
+        return search(head.next, key);
+    }
+
     public int getKthFromTheEnd(int k) {
         var a = first;
         var b= first;
@@ -127,6 +135,20 @@ public class LinkedList {
             b = b.next;
         }
         return a.value;
+    }
+
+    public void reverse() {
+       Node previous = first;
+       Node current = first.next;
+       while (current != null) {
+           Node next = current.next;
+           current.next = previous;
+           previous = current;
+           current = next;
+       }
+       last = first;
+       last.next = null;
+       first = previous;
     }
 
     public void printMiddle() {
