@@ -6,12 +6,7 @@ import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
-        list.addFirst(1);
-        list.addLast(2);
-        list.addLast(3);
-        list.reverse();
-        System.out.println(list);
+
     }
 
     public static boolean isBalanced(String input) {
