@@ -1,12 +1,16 @@
+import hashmaps.CharFinder;
+import hashmaps.HashTable;
+import hashmaps.HashTableExercise;
 import linkedlist.LinkedList;
 import queues.ArrayQueue;
 
-import java.util.PriorityQueue;
-import java.util.Stack;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-
+        HashTableExercise exercise = new HashTableExercise();
+        int[] arr = {2, 7, 11, 15};
+        System.out.println(exercise.twoSum(arr, 9));
     }
 
     public static boolean isBalanced(String input) {
