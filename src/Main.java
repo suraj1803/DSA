@@ -11,6 +11,7 @@ public class Main {
         HashTableExercise exercise = new HashTableExercise();
         int[] arr = {2, 7, 11, 15};
         System.out.println(exercise.twoSum(arr, 9));
+
     }
 
     public static boolean isBalanced(String input) {
