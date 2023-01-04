@@ -3,14 +3,20 @@ import hashmaps.HashTable;
 import hashmaps.HashTableExercise;
 import linkedlist.LinkedList;
 import queues.ArrayQueue;
+import queues.PriorityQueue;
 
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        HashTableExercise exercise = new HashTableExercise();
-        int[] arr = {2, 7, 11, 15};
-        System.out.println(exercise.twoSum(arr, 9));
+        PriorityQueue queue = new PriorityQueue();
+        queue.add(4);
+        queue.add(2);
+        queue.add(1);
+        queue.add(3);
+        System.out.println(queue);
+        System.out.println(queue.remove());
+        System.out.println(queue);
 
     }
 

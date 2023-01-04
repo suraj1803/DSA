@@ -1,28 +1,32 @@
 package queues;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class PriorityQueue {
-    private int[] items = new int[5];
+    private ArrayList<Integer> items;
     private int count;
+    private int front;
+    public PriorityQueue(){
+        items = new ArrayList<>(5);
+        count = 0;
+        front = 0;
+    }
     public void add(int item) {
-       int i;
-       for (i = count - 1; i >= 0; i--){
-          if (items[i] > item)
-              items[i + 1] = items[i];
-          else
-              break;
-       }
-       items[i + 1] = item;
-       count++;
+        int i;
+        for (i = count - 1; i >= 0; i--){
+            if (items.get(i) < item)
+                break;
+        }
+        items.add(i + 1, item);
+        count++;
     }
 
     public int remove() {
-        return items[count - 1];
+        return items.remove(front++);
     }
 
     @Override
     public String toString() {
-        return Arrays.toString(items);
+        return items.toString();
     }
 }
